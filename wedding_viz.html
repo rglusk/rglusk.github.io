@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valle de Guadalupe — Celina's Wedding Travel Plan</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            vino: {
+              50:  '#fdf2f3',
+              100: '#fbe4e7',
+              200: '#f6c6cd',
+              300: '#ee9aa6',
+              400: '#e06478',
+              500: '#cc3d55',
+              600: '#b42740',
+              700: '#971e34',
+              800: '#7f1d2f',
+              900: '#5a121f',
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <style>
+    body { font-feature-settings: "ss01","cv11"; }
+    .chip { display:inline-flex; align-items:center; gap:.35rem; padding:.2rem .55rem; border-radius:9999px; font-size:.72rem; font-weight:600; }
+    .dot { width:.5rem; height:.5rem; border-radius:9999px; display:inline-block; }
+    .card { background:white; border-radius:1rem; box-shadow: 0 1px 2px rgba(16,24,40,.05), 0 1px 3px rgba(16,24,40,.08); }
+    .divider-v { width:1px; background:linear-gradient(to bottom, transparent, #e5e7eb 15%, #e5e7eb 85%, transparent); }
+  </style>
+</head>
+<body class="bg-stone-50 min-h-screen font-sans text-stone-900">
+
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-10">
+
+    <!-- HEADER -->
+    <header class="mb-8">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="chip bg-vino-100 text-vino-700">Celina's Wedding</span>
+        <span class="chip bg-amber-100 text-amber-800">May 22-25, 2026</span>
+        <span class="chip bg-emerald-100 text-emerald-800">7 travelers</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-stone-900">Valle de Guadalupe travel plan</h1>
+      <p class="text-stone-500 mt-3 max-w-2xl">Arrival options (meet Hannah &amp; Ben at TIJ vs. split) and fixed return groups driven by each flight.</p>
+    </header>
+
+    <!-- KEY / PEOPLE -->
+    <section class="card p-5 mb-6">
+      <h2 class="text-sm uppercase tracking-wider text-stone-500 font-semibold mb-3">The crew</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div class="flex items-start gap-3 p-3 rounded-lg bg-rose-50">
+          <span class="dot bg-rose-500 mt-1.5"></span>
+          <div>
+            <div class="font-semibold text-stone-900">Hannah &amp; Ben</div>
+            <div class="text-xs text-stone-600">Fly in/out via <strong>TIJ</strong> · Fri 3:30 PM → Sun PM</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 p-3 rounded-lg bg-sky-50">
+          <span class="dot bg-sky-500 mt-1.5"></span>
+          <div>
+            <div class="font-semibold text-stone-900">Gracie</div>
+            <div class="text-xs text-stone-600">Fly in/out via <strong>SAN</strong> · Fri 2:37 PM → Sun 9:08 PM</div>
+          </div>
+        </div>
+        <div class="flex items-start gap-3 p-3 rounded-lg bg-emerald-50">
+          <span class="dot bg-emerald-500 mt-1.5"></span>
+          <div>
+            <div class="font-semibold text-stone-900">Amanda, Ansel, Riley, Ian</div>
+            <div class="text-xs text-stone-600">Fly in/out via <strong>SAN</strong> · Fri 3:05 PM → Mon 4:45 PM</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRIDAY ARRIVAL TIMELINE -->
+    <section class="card p-5 mb-8">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-bold text-stone-900">Friday, May 22 — Arrivals (PST)</h2>
+        <span class="text-xs text-stone-500">All within a 55-minute window</span>
+      </div>
+      <div class="relative py-6">
+        <!-- rail -->
+        <div class="absolute left-0 right-0 top-1/2 h-0.5 bg-stone-200"></div>
+        <!-- ticks -->
+        <div class="relative grid grid-cols-3 gap-4">
+          <!-- Gracie 2:37 -->
+          <div class="flex flex-col items-center text-center">
+            <div class="h-10 flex items-end">
+              <div class="bg-sky-50 border border-sky-200 rounded-md px-2 py-1 text-xs font-semibold text-sky-800">Gracie · SAN</div>
+            </div>
+            <div class="w-4 h-4 rounded-full bg-sky-500 ring-4 ring-sky-100 my-2"></div>
+            <div class="text-sm font-bold text-stone-900">2:37 PM</div>
+          </div>
+          <!-- Amanda group 3:05 -->
+          <div class="flex flex-col items-center text-center">
+            <div class="h-10 flex items-end">
+              <div class="bg-emerald-50 border border-emerald-200 rounded-md px-2 py-1 text-xs font-semibold text-emerald-800">Amanda · Ansel · Riley · Ian · SAN</div>
+            </div>
+            <div class="w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-emerald-100 my-2"></div>
+            <div class="text-sm font-bold text-stone-900">3:05 PM</div>
+          </div>
+          <!-- Hannah/Ben 3:30 -->
+          <div class="flex flex-col items-center text-center">
+            <div class="h-10 flex items-end">
+              <div class="bg-rose-50 border border-rose-200 rounded-md px-2 py-1 text-xs font-semibold text-rose-800">Hannah &amp; Ben · TIJ</div>
+            </div>
+            <div class="w-4 h-4 rounded-full bg-rose-500 ring-4 ring-rose-100 my-2"></div>
+            <div class="text-sm font-bold text-stone-900">3:30 PM</div>
+          </div>
+        </div>
+      </div>
+      <p class="text-xs text-stone-500 mt-2">Gracie lands 28 min before the SAN group, and 53 min before Hannah &amp; Ben. There's enough buffer for her to wait at SAN or be the first across the border.</p>
+    </section>
+
+    <!-- ARRIVAL OPTIONS (TABBED) -->
+    <section x-data="{ tab: 'A' }" class="mb-10">
+      <h2 class="text-lg font-bold text-stone-900 mb-1">Arrival — two ways to reach Valle</h2>
+      <p class="text-sm text-stone-500 mb-4">Valle de Guadalupe is ~1 h 30 from TIJ airport and ~2 h 45–3 h from SAN (via San Ysidro or Tecate border).</p>
+
+      <div class="inline-flex rounded-full bg-stone-200 p-1 mb-5">
+        <button @click="tab='A'" :class="tab==='A' ? 'bg-white shadow text-stone-900' : 'text-stone-600'" class="px-4 py-1.5 rounded-full text-sm font-semibold transition">Option A — Convoy via TIJ</button>
+        <button @click="tab='B'" :class="tab==='B' ? 'bg-white shadow text-stone-900' : 'text-stone-600'" class="px-4 py-1.5 rounded-full text-sm font-semibold transition">Option B — Split (Hannah &amp; Ben solo)</button>
+      </div>
+
+      <!-- OPTION A -->
+      <div x-show="tab==='A'" x-transition class="card p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="chip bg-vino-600 text-white">Option A</span>
+          <h3 class="text-xl font-bold">Meet Hannah &amp; Ben at TIJ — everyone convoys together</h3>
+        </div>
+
+        <!-- Route diagram -->
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] items-stretch gap-3 mb-6">
+          <!-- SAN -->
+          <div class="border border-stone-200 rounded-xl p-4 bg-stone-50">
+            <div class="text-xs uppercase tracking-wider text-stone-500 font-semibold mb-1">Start</div>
+            <div class="font-bold">San Diego (SAN)</div>
+            <ul class="text-xs text-stone-600 mt-2 space-y-1">
+              <li><span class="dot bg-sky-500 mr-1"></span>Gracie lands 2:37 PM</li>
+              <li><span class="dot bg-emerald-500 mr-1"></span>Amanda+3 land 3:05 PM</li>
+            </ul>
+          </div>
+          <div class="hidden md:flex flex-col items-center justify-center text-stone-400">
+            <div class="text-2xl">→</div>
+            <div class="text-[10px] tracking-wide">~35-45 min<br>San Ysidro / CBX</div>
+          </div>
+          <!-- TIJ rendezvous -->
+          <div class="border-2 border-vino-400 rounded-xl p-4 bg-vino-50">
+            <div class="text-xs uppercase tracking-wider text-vino-700 font-semibold mb-1">Rendezvous</div>
+            <div class="font-bold text-vino-900">Tijuana Airport (TIJ)</div>
+            <ul class="text-xs text-vino-800 mt-2 space-y-1">
+              <li><span class="dot bg-rose-500 mr-1"></span>Hannah &amp; Ben land 3:30 PM</li>
+              <li>Pickup ~4:00 PM once bags are out</li>
+            </ul>
+          </div>
+          <div class="hidden md:flex flex-col items-center justify-center text-stone-400">
+            <div class="text-2xl">→</div>
+            <div class="text-[10px] tracking-wide">~1 h 30<br>via Ruta del Vino</div>
+          </div>
+          <!-- Valle -->
+          <div class="border border-emerald-200 rounded-xl p-4 bg-emerald-50">
+            <div class="text-xs uppercase tracking-wider text-emerald-700 font-semibold mb-1">Destination</div>
+            <div class="font-bold text-emerald-900">Valle de Guadalupe</div>
+            <div class="text-xs text-emerald-800 mt-2">ETA <strong>~5:30-6:00 PM</strong></div>
+          </div>
+        </div>
+
+        <!-- Plan steps -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <h4 class="font-semibold text-stone-900 mb-2">How the SAN group gets to TIJ</h4>
+            <ol class="list-decimal list-inside text-sm text-stone-700 space-y-1">
+              <li>Gracie (2:37 PM) waits at SAN for Amanda/Ansel/Riley/Ian (3:05 PM).</li>
+              <li>Group of 5 + bags → Uber/taxi or pre-booked van to San Ysidro (~25 min).</li>
+              <li>Walk across border (PedWest, ~10-20 min).</li>
+              <li>Pre-arranged shuttle picks up on MX side → TIJ airport (~15 min).</li>
+            </ol>
+            <p class="text-xs text-stone-500 mt-2">Alt: book a single shuttle service (e.g. Baja Winery Tours, Ruta Divina) that handles SAN → TIJ pickup → Valle door-to-door.</p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-stone-900 mb-2">Trade-offs</h4>
+            <ul class="text-sm space-y-2">
+              <li class="flex gap-2"><span class="text-emerald-600 font-bold">+</span><span>Everyone travels together from TIJ — bonding + one shared van to Valle.</span></li>
+              <li class="flex gap-2"><span class="text-emerald-600 font-bold">+</span><span>Shorter Mexico-side drive (~1.5 h vs. ~3 h).</span></li>
+              <li class="flex gap-2"><span class="text-emerald-600 font-bold">+</span><span>Avoids a US rental car crossing into MX (insurance / permit hassle).</span></li>
+              <li class="flex gap-2"><span class="text-rose-600 font-bold">−</span><span>SAN group has an extra transfer + border crossing with luggage.</span></li>
+              <li class="flex gap-2"><span class="text-rose-600 font-bold">−</span><span>Border wait time is unpredictable (can add 30-90 min).</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- OPTION B -->
+      <div x-show="tab==='B'" x-transition class="card p-6">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="chip bg-sky-600 text-white">Option B</span>
+          <h3 class="text-xl font-bold">Hannah &amp; Ben go directly; SAN group drives down together</h3>
+        </div>
+
+        <!-- Two parallel routes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+          <!-- Route 1 -->
+          <div class="border border-rose-200 rounded-xl p-4 bg-rose-50">
+            <div class="text-xs uppercase tracking-wider text-rose-700 font-semibold mb-2">Route 1 · Hannah &amp; Ben (2 pax)</div>
+            <div class="flex items-center gap-2 text-sm font-semibold">
+              <span>TIJ 3:30 PM</span>
+              <span class="text-stone-400">→</span>
+              <span>Valle ~5:00 PM</span>
+            </div>
+            <div class="text-xs text-stone-600 mt-2">~1 h 30 drive. Pre-booked private transfer or Uber MX. No border.</div>
+          </div>
+          <!-- Route 2 -->
+          <div class="border border-emerald-200 rounded-xl p-4 bg-emerald-50">
+            <div class="text-xs uppercase tracking-wider text-emerald-700 font-semibold mb-2">Route 2 · Gracie + Amanda/Ansel/Riley/Ian (5 pax)</div>
+            <div class="flex items-center gap-2 text-sm font-semibold">
+              <span>SAN ~3:30 PM</span>
+              <span class="text-stone-400">→</span>
+              <span>Valle ~6:00-6:30 PM</span>
+            </div>
+            <div class="text-xs text-stone-600 mt-2">~2 h 45-3 h door to door. Shuttle van or rental with MX insurance; cross at San Ysidro or Tecate (quieter).</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <h4 class="font-semibold text-stone-900 mb-2">Logistics</h4>
+            <ol class="list-decimal list-inside text-sm text-stone-700 space-y-1">
+              <li>Hannah &amp; Ben book a TIJ→Valle transfer ahead of time.</li>
+              <li>Gracie waits at SAN for the 3:05 PM group; shuttle departs ~3:30 PM once everyone is curbside.</li>
+              <li>Consider <strong>Tecate border</strong> — adds ~15 min driving but often skips 45+ min of San Ysidro wait.</li>
+            </ol>
+          </div>
+          <div>
+            <h4 class="font-semibold text-stone-900 mb-2">Trade-offs</h4>
+            <ul class="text-sm space-y-2">
+              <li class="flex gap-2"><span class="text-emerald-600 font-bold">+</span><span>No double-handling — each group moves on its own timeline.</span></li>
+              <li class="flex gap-2"><span class="text-emerald-600 font-bold">+</span><span>Hannah &amp; Ben arrive earliest (~5 PM) — can settle in.</span></li>
+              <li class="flex gap-2"><span class="text-emerald-600 font-bold">+</span><span>Simpler single-leg journey for each party.</span></li>
+              <li class="flex gap-2"><span class="text-rose-600 font-bold">−</span><span>Two separate bookings / drivers.</span></li>
+              <li class="flex gap-2"><span class="text-rose-600 font-bold">−</span><span>SAN group's single leg is longer (more time in transit).</span></li>
+              <li class="flex gap-2"><span class="text-rose-600 font-bold">−</span><span>Arrive Valle at different times (~1 h apart).</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommendation strip -->
+      <div class="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+        <strong>Quick take:</strong> Option B is the lower-friction default — fewer transfers, no luggage at the border, and arrival spread is only ~1 hour. Choose Option A only if meeting up first matters more than transit efficiency.
+      </div>
+    </section>
+
+    <!-- RETURN TRIPS -->
+    <section class="mb-10">
+      <h2 class="text-lg font-bold text-stone-900 mb-1">Return trips — three groupings, fixed by flights</h2>
+      <p class="text-sm text-stone-500 mb-4">Everyone leaves on different days / to different airports, so returns can't be combined into one big convoy.</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+
+        <!-- Sunday Group 1: Hannah/Ben → TIJ -->
+        <div class="card p-5 border-t-4 border-rose-500">
+          <div class="chip bg-rose-100 text-rose-700 mb-3">Sunday May 24 · Afternoon</div>
+          <h3 class="font-bold text-stone-900 mb-1">Hannah &amp; Ben → TIJ</h3>
+          <p class="text-xs text-stone-500 mb-3">Flight time unknown — confirm and back-calculate.</p>
+          <div class="text-sm space-y-2">
+            <div class="flex justify-between"><span class="text-stone-500">Depart Valle</span><span class="font-semibold">3-4 h before flight</span></div>
+            <div class="flex justify-between"><span class="text-stone-500">Drive</span><span class="font-semibold">~1 h 30</span></div>
+            <div class="flex justify-between"><span class="text-stone-500">At TIJ</span><span class="font-semibold">2 h pre-flight</span></div>
+          </div>
+          <div class="mt-3 pt-3 border-t border-stone-100 text-xs text-stone-600">
+            <strong>Ride idea:</strong> Could share a transfer with Gracie if timing aligns — driver drops Hannah &amp; Ben at TIJ, then continues ~45 min across the border to SAN.
+          </div>
+        </div>
+
+        <!-- Sunday Group 2: Gracie → SAN -->
+        <div class="card p-5 border-t-4 border-sky-500">
+          <div class="chip bg-sky-100 text-sky-700 mb-3">Sunday May 24 · 9:08 PM flight</div>
+          <h3 class="font-bold text-stone-900 mb-1">Gracie → SAN</h3>
+          <p class="text-xs text-stone-500 mb-3">Needs to be at SAN by ~7:00 PM.</p>
+          <div class="text-sm space-y-2">
+            <div class="flex justify-between"><span class="text-stone-500">Leave Valle</span><span class="font-semibold">~3:30-4:00 PM</span></div>
+            <div class="flex justify-between"><span class="text-stone-500">Drive + border</span><span class="font-semibold">~3 h (buffer!)</span></div>
+            <div class="flex justify-between"><span class="text-stone-500">At SAN</span><span class="font-semibold">~7:00 PM</span></div>
+          </div>
+          <div class="mt-3 pt-3 border-t border-stone-100 text-xs text-stone-600">
+            <strong>Best combo:</strong> Ride with Hannah &amp; Ben's transfer → drop them at TIJ → continue to SAN. One vehicle, one booking.
+          </div>
+        </div>
+
+        <!-- Monday Group: Amanda/Ansel/Riley/Ian → SAN -->
+        <div class="card p-5 border-t-4 border-emerald-500">
+          <div class="chip bg-emerald-100 text-emerald-700 mb-3">Monday May 25 · 4:45 PM flight</div>
+          <h3 class="font-bold text-stone-900 mb-1">Amanda · Ansel · Riley · Ian → SAN</h3>
+          <p class="text-xs text-stone-500 mb-3">Needs to be at SAN by ~2:45 PM.</p>
+          <div class="text-sm space-y-2">
+            <div class="flex justify-between"><span class="text-stone-500">Leave Valle</span><span class="font-semibold">~11:00 AM</span></div>
+            <div class="flex justify-between"><span class="text-stone-500">Drive + border</span><span class="font-semibold">~3 h (buffer!)</span></div>
+            <div class="flex justify-between"><span class="text-stone-500">At SAN</span><span class="font-semibold">~2:45 PM</span></div>
+          </div>
+          <div class="mt-3 pt-3 border-t border-stone-100 text-xs text-stone-600">
+            <strong>Note:</strong> Last day — enjoy a leisurely brunch in Valle, then head out. Pre-book shuttle; avoid relying on Uber from Valle.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RETURN SANKEY-ish DIAGRAM -->
+    <section class="card p-6 mb-10">
+      <h2 class="text-lg font-bold text-stone-900 mb-4">Who shares which ride back?</h2>
+      <div class="grid grid-cols-[1fr_auto_1fr] gap-4 items-center text-sm">
+        <!-- Sources: Valle -->
+        <div class="text-right">
+          <div class="inline-block bg-amber-100 border border-amber-300 rounded-full px-4 py-2 font-bold text-amber-900">Valle de Guadalupe</div>
+          <div class="mt-3 text-xs text-stone-500">7 people · 3 departures</div>
+        </div>
+        <div class="text-stone-300 text-2xl text-center">→</div>
+        <!-- Destinations -->
+        <div class="space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="flex-1 bg-rose-50 border border-rose-200 rounded-lg px-3 py-2">
+              <div class="text-xs uppercase tracking-wider text-rose-700 font-semibold">Sun PM · shared car</div>
+              <div class="text-stone-900 font-semibold">Hannah &amp; Ben → TIJ, then Gracie → SAN</div>
+              <div class="text-xs text-stone-500">3 passengers, 1 driver, 2 drop-offs</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="flex-1 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+              <div class="text-xs uppercase tracking-wider text-emerald-700 font-semibold">Mon PM</div>
+              <div class="text-stone-900 font-semibold">Amanda · Ansel · Riley · Ian → SAN</div>
+              <div class="text-xs text-stone-500">4 passengers, 1 vehicle</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="text-xs text-stone-500 mt-4"><strong>Key insight:</strong> Hannah/Ben + Gracie can share one Sunday transfer — the driver drops Hannah &amp; Ben at TIJ, then continues ~45 min to SAN for Gracie. This is both economical and smooth (one booking, one vehicle).</p>
+    </section>
+
+    <!-- DRIVE TIMES REFERENCE -->
+    <section class="card p-5 mb-10">
+      <h2 class="text-sm uppercase tracking-wider text-stone-500 font-semibold mb-3">Drive-time reference</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+        <div class="p-3 rounded-lg bg-stone-50">
+          <div class="text-stone-500 text-xs">SAN ↔ TIJ</div>
+          <div class="font-bold text-lg">35-45 min</div>
+          <div class="text-xs text-stone-500">+ border wait</div>
+        </div>
+        <div class="p-3 rounded-lg bg-stone-50">
+          <div class="text-stone-500 text-xs">TIJ ↔ Valle</div>
+          <div class="font-bold text-lg">~1 h 30</div>
+          <div class="text-xs text-stone-500">Ruta del Vino (MX-3)</div>
+        </div>
+        <div class="p-3 rounded-lg bg-stone-50">
+          <div class="text-stone-500 text-xs">SAN ↔ Valle</div>
+          <div class="font-bold text-lg">~2 h 45-3 h</div>
+          <div class="text-xs text-stone-500">via San Ysidro or Tecate</div>
+        </div>
+        <div class="p-3 rounded-lg bg-stone-50">
+          <div class="text-stone-500 text-xs">Border wait (variable)</div>
+          <div class="font-bold text-lg">15-90 min</div>
+          <div class="text-xs text-stone-500">Check CBP wait times</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-xs text-stone-400 mt-10 border-t border-stone-200 pt-4">
+      Generated with Claude Code — 2026-05-04. Drive times are typical ranges; check live traffic + border waits close to the date.
+    </footer>
+  </div>
+</body>
+</html>
