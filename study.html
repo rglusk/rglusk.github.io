@@ -74,6 +74,30 @@
 
   .footer-note { color: var(--muted); font-size: 12px; text-align: center; margin-top: 32px; }
 
+  @media (max-width: 640px) {
+    html, body { font-size: 14px; }
+    .wrap { padding: 16px 12px 60px; max-width: 100%; }
+    h1 { font-size: 22px; }
+    section { padding: 14px 14px; border-radius: 10px; }
+    section h2 { font-size: 16px; flex-wrap: wrap; }
+    ul.checklist { grid-template-columns: 1fr; gap: 2px 0; }
+    ul.habits { grid-template-columns: 1fr; }
+    .progress-wrap { padding: 12px 14px; gap: 10px; }
+    .progress-bar { min-width: 0; flex-basis: 100%; }
+    .filter-bar { padding: 10px 12px; gap: 6px; }
+    .filter-chip { font-size: 12px; padding: 4px 10px; }
+    .cal { gap: 3px; }
+    .cal-day { min-height: 44px; font-size: 11px; }
+    .cal-day .num { font-size: 12px; }
+    .cal-day .kind { font-size: 8.5px; }
+    .cal-head { font-size: 10px; }
+    .cal-legend { gap: 8px; font-size: 11px; }
+    .weekend { grid-template-columns: 1fr; gap: 10px; }
+    .practice-controls { gap: 6px; }
+    .practice-progress { width: 100%; margin-left: 0; }
+    .crit-list { padding-left: 16px; margin-left: 6px; }
+  }
+
   .group-tag { display: inline-block; padding: 1px 7px; border-radius: 999px; font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin-left: 8px; vertical-align: middle; }
   .tag-daily { background: rgba(122, 162, 255, 0.15); color: var(--accent); }
   .tag-weekend { background: rgba(91, 227, 167, 0.15); color: var(--accent-2); }
@@ -184,7 +208,7 @@
 </style>
 </head>
 <body>
-<div id="gate" style="position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:9999;">
+<div id="gate" style="position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background:#0f1115;display:flex;align-items:center;justify-content:center;z-index:9999;">
   <form id="gate-form" style="background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:28px 32px;display:flex;flex-direction:column;gap:12px;min-width:280px;">
     <label for="gate-input" style="color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:0.06em;">Password</label>
     <input id="gate-input" type="password" autofocus style="background:var(--panel-2);border:1px solid var(--border);color:var(--text);padding:10px 12px;border-radius:8px;font-size:14px;outline:none;" />
